@@ -19,6 +19,9 @@ AR <- filter(dat, state == "Arkansas") %>% select(deaths)
 ARtotal <- sum(AR)
 
 ## CALIFORNIA TOTAL DEATHS
+CA <- filter(dat, state == "California") %>% select(deaths)
+CAtotal <- sum(CA)
+
 ## COLORADO TOTAL DEATHS
 ## CONNECTICUT TOTAL DEATHS
 ## DELAWARE TOTAL DEATHS
