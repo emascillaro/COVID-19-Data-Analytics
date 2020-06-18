@@ -23,8 +23,8 @@ CA <- filter(dat, state == "California") %>% select(deaths)
 CAtotal <- sum(CA)
 
 ## COLORADO TOTAL DEATHS
-AR <- filter(dat, state == "Arkansas") %>% select(deaths)
-ARtotal <- sum(AR)
+CO <- filter(dat, state == "Colorado") %>% select(deaths)
+COtotal <- sum(CO)
 
 ## CONNECTICUT TOTAL DEATHS
 CT <- filter(dat, state == "Connecticut") %>% select(deaths)
@@ -33,6 +33,10 @@ CTtotal <- sum(CT)
 ## DELAWARE TOTAL DEATHS
 DE <- filter(dat, state == "Delaware") %>% select(deaths)
 DEtotal <- sum(DE)
+
+## DISTRICT OF COLUMBIA TOTAL DEATHS
+DC <- filter(dat, state == "District of Columbia") %>% select(deaths)
+DCtotal <- sum(DC)
 
 ## FLORIDA TOTAL DEATHS
 FL <- filter(dat, state == "Florida") %>% select(deaths)
@@ -71,7 +75,7 @@ KY <- filter(dat, state == "Kentucky") %>% select(deaths)
 KYtotal <- sum(KY)
 
 ## LOUISINANA TOTAL DEATHS
-LA <- filter(dat, state == "Louisianna") %>% select(deaths)
+LA <- filter(dat, state == "Louisiana") %>% select(deaths)
 LAtotal <- sum(LA)
 
 ## MAINE TOTAL DEATHS
@@ -203,3 +207,38 @@ WY <- filter(dat, state == "Wyoming") %>% select(deaths)
 WYtotal <- sum(WY)
 
 #------------------------------------------------------------------------------
+
+
+StateNames <- c("Alabama", "Alaska", "Arizona", "Arkansas",
+                "California", "Colorado", "Connecticut",
+                "Delaware", "District of Columbia",
+                "Florida", "Georgia", "Hawaii", "Idaho",
+                "Illinois", "Indiana", "Iowa", "Kansas",
+                "Kentucky", "Louisiana", "Maine", "Maryland",
+                "Massachusetts", "Michigan", "Minnesota",
+                "Mississippi", "Missouri", "Montana", "Nebraska",
+                "Nevada", "New Hampshire", "New Jersey",
+                "New Mexico", "New York", "North Carolina",
+                "North Dakota", "Ohio", "Oklahoma", "Oregon",
+                "Pennsylvania", "Rhode Island", "South Carolina",
+                "South Dakota", "Tennessee", "Texas", "Utah",
+                "Vermont", "Virginia", "Washington",
+                "West Virginia", "Wisconsin", "Wyoming")
+length(StateNames)
+StateDeaths <- c(ALtotal, AKtotal, AZtotal, ARtotal, CAtotal,
+                 COtotal, CTtotal, DEtotal, DCtotal, FLtotal,
+                 GAtotal, HItotal, IDtotal, ILtotal, INtotal,
+                 IAtotal, KStotal, KYtotal, LAtotal, MEtotal,
+                 MDtotal, MAtotal, MItotal, MNtotal, MStotal,
+                 MOtotal, MTtotal, NEtotal, NVtotal, NHtotal, 
+                 NJtotal, NMtotal, NYtotal, NCtotal, NDtotal, 
+                 OHtotal, OKtotal, ORtotal, PAtotal, RItotal,
+                 SCtotal, SDtotal, TNtotal, TXtotal, UTtotal,
+                 VTtotal, VAtotal, WAtotal, WVtotal, WItotal,
+                 WYtotal)
+length(StateDeaths)
+
+# Creates a Barplot Displaying Deaths by state
+barplot(StateDeaths, main = "Distribution of COVID-19 Deaths by State",
+        xlab = "State", ylab = "# of Deaths", 
+        names.arg = StateNames)
