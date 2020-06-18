@@ -224,7 +224,7 @@ StateNames <- c("Alabama", "Alaska", "Arizona", "Arkansas",
                 "South Dakota", "Tennessee", "Texas", "Utah",
                 "Vermont", "Virginia", "Washington",
                 "West Virginia", "Wisconsin", "Wyoming")
-length(StateNames)
+
 StateDeaths <- c(ALtotal, AKtotal, AZtotal, ARtotal, CAtotal,
                  COtotal, CTtotal, DEtotal, DCtotal, FLtotal,
                  GAtotal, HItotal, IDtotal, ILtotal, INtotal,
@@ -236,9 +236,8 @@ StateDeaths <- c(ALtotal, AKtotal, AZtotal, ARtotal, CAtotal,
                  SCtotal, SDtotal, TNtotal, TXtotal, UTtotal,
                  VTtotal, VAtotal, WAtotal, WVtotal, WItotal,
                  WYtotal)
-length(StateDeaths)
 
 # Creates a Barplot Displaying Deaths by state
 barplot(StateDeaths, main = "Distribution of COVID-19 Deaths by State",
         xlab = "State", ylab = "# of Deaths", 
-        names.arg = StateNames)
+        names.arg = StateNames, col = "cadetblue2", las=2, cex.names = .75)
