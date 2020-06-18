@@ -6,7 +6,7 @@ dat <- read.csv("us-states.csv")
 AL <- filter(dat, state == "Alabama") %>% select(deaths)
 ALtotal <- sum(AL)
 
-## ALASKA TOTAL DEATHS
+## ALASKA TOTAL DEATHS 
 AK <- filter(dat, state == "Alaska") %>% select(deaths)
 AKtotal <- sum(AK)
 
