@@ -207,7 +207,7 @@ WY <- filter(dat, state == "Wyoming") %>% select(deaths)
 WYtotal <- sum(WY)
 
 #------------------------------------------------------------------------------
-
+#Individual States
 
 StateNames <- c("Alabama", "Alaska", "Arizona", "Arkansas",
                 "California", "Colorado", "Connecticut",
@@ -240,4 +240,48 @@ StateDeaths <- c(ALtotal, AKtotal, AZtotal, ARtotal, CAtotal,
 # Creates a Barplot Displaying Deaths by state
 barplot(StateDeaths, main = "Distribution of COVID-19 Deaths by State",
         xlab = "State", ylab = "# of Deaths", 
-        names.arg = StateNames, col = "cadetblue2", las=2, cex.names = .75)
+        names.arg = StateNames, col = "cadetblue2", 
+        las=2, cex.names = .75)
+
+#------------------------------------------------------------------------------
+#By Region
+
+FarWestTotal <- sum(CAtotal, HItotal, NVtotal)
+
+GreatLakesTotal <- sum(ILtotal, INtotal, MItotal, MNtotal,
+                       OHtotal, WItotal)
+
+MidsouthTotal <- sum(DEtotal, DCtotal, KYtotal, MDtotal, NCtotal,
+                     TNtotal, VAtotal, WVtotal)
+
+MidwestTotoal <- sum(IAtotal, KStotal, MOtotal, NEtotal, NDtotal,
+                     SDtotal)
+
+MountainwestTotal <- sum(AZtotal, COtotal, IDtotal, MTtotal, NMtotal,
+                         UTtotal, WYtotal)
+
+NewEnglandTotal <- sum(CTtotal, MEtotal, MAtotal, NHtotal, RItotal,
+                       VTtotal)
+
+NortheastTotal <- sum(NJtotal, NYtotal, PAtotal)
+
+NorthwestTotal <- sum(AKtotal, ORtotal, WAtotal)
+
+SouthCentralTotal <- sum(ARtotal, LAtotal, OKtotal, TXtotal)
+
+SoutheastTotal <- sum(ALtotal, FLtotal, GAtotal, MStotal, SCtotal)
+
+RegionNames <- c("Far West", "Great Lakes", "Midsouth", "Midwest",
+                 "Mountain West", "New England", "Northeast",
+                 "Northwest", "South Central", "Southeast")
+
+RegionDeaths <- c(FarWestTotal, GreatLakesTotal, MidsouthTotal,
+                  MidwestTotoal, MountainwestTotal, NewEnglandTotal,
+                  NortheastTotal, NorthwestTotal, SouthCentralTotal,
+                  SoutheastTotal)
+
+# Creates a Barplot Displaying Deaths by Region
+barplot(RegionDeaths, main = "Distribution of COVID-19 Deaths by Region",
+        xlab = "Region", ylab = "# of Deaths", 
+        names.arg = RegionNames, col = "Darkblue", 
+        las=2, cex.names = .75)
