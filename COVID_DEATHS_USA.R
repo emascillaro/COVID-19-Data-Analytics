@@ -1,4 +1,4 @@
-install.packages("dplyr") 
+#install.packages("dplyr") 
 library(dplyr)
 dat <- read.csv("us-states.csv")
 
@@ -244,7 +244,7 @@ par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(StateDeaths, main = "Distribution of COVID-19 Deaths by State",
         xlab = "State", ylab = "# of Deaths", 
         names.arg = StateNames, col = "cadetblue2", 
-        las=2, cex.names = .75, font.lab = 2, ylim = c(0, 2000000))
+        las=2, cex.names = .75, font.lab = 2, ylim = c(0, 36000))
 
 #------------------------------------------------------------------------------
 #By Region
@@ -290,4 +290,4 @@ par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(RegionDeaths, main = "Distribution of COVID-19 Deaths by Region",
         xlab = "Region", ylab = "# of Deaths", 
         names.arg = RegionNames, col = "Darkblue", 
-        las=2, cex.names = .75, font.lab = 2, ylim = c(0,2500000))
+        las=2, cex.names = .75, font.lab = 2, ylim = c(0,50000))
