@@ -238,10 +238,13 @@ StateCases <- c(ALtotal, AKtotal, AZtotal, ARtotal, CAtotal,
                  WYtotal)
 
 # Creates a Barplot Displaying cases by state
+par(mar=c(7,6,4,1)+.1) #sets width of margins of graph
+par(oma = c(3, 3, 3, 3)) #adds 4 lines to every side of graph
+par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(StateCases, main = "Distribution of COVID-19 Cases by State",
         xlab = "State", ylab = "# of cases", 
         names.arg = StateNames, col = "coral", 
-        las=2, cex.names = .75)
+        las=2, cex.names = .75, font.lab = 2, ylim = c(0,3.5e+70))
 
 #------------------------------------------------------------------------------
 #By Region
@@ -281,7 +284,10 @@ RegionCases <- c(FarWestTotal, GreatLakesTotal, MidsouthTotal,
                   SoutheastTotal)
 
 # Creates a Barplot Displaying cases by Region
+par(mar=c(7,6,4,1)+.1) #sets width of margins of graph
+par(oma = c(3, 3, 3, 3)) #adds 4 lines to every side of graph
+par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(RegionCases, main = "Distribution of COVID-19 cases by Region",
         xlab = "Region", ylab = "# of cases", 
         names.arg = RegionNames, col = "darkred", 
-        las=2, cex.names = .75)
+        las=2, cex.names = .75, font.lab = 2, ylim = c(0, 3.5e+70))
