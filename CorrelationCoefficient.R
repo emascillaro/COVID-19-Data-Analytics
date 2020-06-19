@@ -14,7 +14,7 @@ RegionDeathRate <- (RegionDeaths/RegionCases)
 cor(RegionDeathRate, RegionHospitals)
 par(mar=c(3,3,3,3))
 plot(RegionDeathRate, RegionHospitals, 
-     main = "Relationship between Death Rate and # of Hospitals by Region",
+     main = "Relationship between Death Rate and Number of Hospitals by Region",
      xlab = "Regional Death Rate", ylab = "Region Hospitals")
 abline(lm(RegionDeathRate~RegionHospitals))
 lm(RegionDeathRate~RegionHospitals)
