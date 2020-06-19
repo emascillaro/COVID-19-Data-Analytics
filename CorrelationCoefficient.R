@@ -3,7 +3,7 @@ StateDeathRate <- (StateDeaths/StateCases)
 cor(StateDeathRate, StateHospitals)
 par(mar=c(1,1,1,1))
 plot(StateDeathRate, StateHospitals, 
-     main = "Relationship between Death Rate and # of Hospitals by State",
+     main = "Relationship between Death Rate and Number of Hospitals by State",
      xlab = "State Death Rate", ylab = "State Hospitals")
 abline(lm(StateDeathRate~StateHospitals))
 lm(StateDeathRate~StateHospitals)
