@@ -3,7 +3,10 @@
 
 # Correlation between Hospitalizations and State Death Rate
 StateDeathRate <- (StateDeaths/StateCases)
+
 cor(StateDeathRate, StateHospitals)
+#Output from cor(StateDeathRate, StateHospitals) = [1] 0.05772707
+
 par(mar=c(1,1,1,1))
 plot(StateDeathRate, StateHospitals, 
      main = "Relationship between Death Rate and # of Hospitals by State",
@@ -15,7 +18,10 @@ lm(StateDeathRate~StateHospitals)
 #----------------------------------------------------------
 # Correlation between Hospitalizations and Regional Death Rate
 RegionDeathRate <- (RegionDeaths/RegionCases)
+
 cor(RegionDeathRate, RegionHospitals)
+#Output from cor(RegionDeathRate, RegionHospitals) = [1] -0.3206355
+
 par(mar=c(3,3,3,3))
 plot(RegionDeathRate, RegionHospitals, 
      main = "Relationship between Death Rate and Number of Hospitals by Region",
@@ -25,3 +31,4 @@ plot(RegionDeathRate, RegionHospitals,
 
 abline(lm(RegionHospitals~RegionDeathRate), col = "purple")
 lm(RegionDeathRate~RegionHospitals)
+
