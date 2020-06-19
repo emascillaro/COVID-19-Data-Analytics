@@ -244,7 +244,7 @@ par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(StateCases, main = "Distribution of COVID-19 Cases by State",
         xlab = "State", ylab = "# of cases", 
         names.arg = StateNames, col = "coral", 
-        las=2, cex.names = .75, font.lab = 2, ylim = c(0,3.5e+70))
+        las=2, cex.names = .75, font.lab = 2)
 
 #------------------------------------------------------------------------------
 #By Region
@@ -290,4 +290,4 @@ par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(RegionCases, main = "Distribution of COVID-19 cases by Region",
         xlab = "Region", ylab = "# of cases", 
         names.arg = RegionNames, col = "darkred", 
-        las=2, cex.names = .75, font.lab = 2, ylim = c(0, 3.5e+70))
+        las=2, cex.names = .75, font.lab = 2)
