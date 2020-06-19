@@ -238,10 +238,13 @@ StateDeaths <- c(ALtotal, AKtotal, AZtotal, ARtotal, CAtotal,
                  WYtotal)
 
 # Creates a Barplot Displaying Deaths by state
+par(mar=c(7,6,4,1)+.1) #sets width of margins of graph
+par(oma = c(3, 3, 3, 3)) #adds 4 lines to every side of graph
+par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(StateDeaths, main = "Distribution of COVID-19 Deaths by State",
         xlab = "State", ylab = "# of Deaths", 
         names.arg = StateNames, col = "cadetblue2", 
-        las=2, cex.names = .75)
+        las=2, cex.names = .75, font.lab = 2, ylim = c(0, 30000))
 
 #------------------------------------------------------------------------------
 #By Region
@@ -281,7 +284,10 @@ RegionDeaths <- c(FarWestTotal, GreatLakesTotal, MidsouthTotal,
                   SoutheastTotal)
 
 # Creates a Barplot Displaying Deaths by Region
+par(mar=c(7,6,4,1)+.1) #sets width of margins of graph
+par(oma = c(3, 3, 3, 3)) #adds 4 lines to every side of graph
+par(mgp = c(5, 1, 0)) #changes spaces between axes and labels
 barplot(RegionDeaths, main = "Distribution of COVID-19 Deaths by Region",
         xlab = "Region", ylab = "# of Deaths", 
         names.arg = RegionNames, col = "Darkblue", 
-        las=2, cex.names = .75)
+        las=2, cex.names = .75, font.lab = 2, ylim = c(0,30000))
